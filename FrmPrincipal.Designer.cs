@@ -46,6 +46,7 @@
             IconSalir = new PictureBox();
             btnSlide = new PictureBox();
             PanelContenedor = new Panel();
+            btnEventos = new Button();
             MenuVertical.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             BarraTitulo.SuspendLayout();
@@ -59,6 +60,7 @@
             // MenuVertical
             // 
             MenuVertical.BackColor = Color.FromArgb(9, 29, 70);
+            MenuVertical.Controls.Add(btnEventos);
             MenuVertical.Controls.Add(btnAyuda);
             MenuVertical.Controls.Add(btnCrearUsuario);
             MenuVertical.Controls.Add(btnAjustes);
@@ -84,7 +86,7 @@
             btnAyuda.ForeColor = Color.Gainsboro;
             btnAyuda.Image = (Image)resources.GetObject("btnAyuda.Image");
             btnAyuda.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAyuda.Location = new Point(0, 434);
+            btnAyuda.Location = new Point(0, 277);
             btnAyuda.Name = "btnAyuda";
             btnAyuda.Size = new Size(250, 50);
             btnAyuda.TabIndex = 8;
@@ -120,7 +122,7 @@
             btnAjustes.ForeColor = Color.Gainsboro;
             btnAjustes.Image = (Image)resources.GetObject("btnAjustes.Image");
             btnAjustes.ImageAlign = ContentAlignment.MiddleLeft;
-            btnAjustes.Location = new Point(0, 351);
+            btnAjustes.Location = new Point(0, 428);
             btnAjustes.Name = "btnAjustes";
             btnAjustes.Size = new Size(250, 50);
             btnAjustes.TabIndex = 6;
@@ -138,7 +140,7 @@
             BtnReportes.ForeColor = Color.Gainsboro;
             BtnReportes.Image = (Image)resources.GetObject("BtnReportes.Image");
             BtnReportes.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnReportes.Location = new Point(1, 511);
+            BtnReportes.Location = new Point(0, 503);
             BtnReportes.Name = "BtnReportes";
             BtnReportes.Size = new Size(250, 50);
             BtnReportes.TabIndex = 5;
@@ -156,7 +158,7 @@
             BtnLista.ForeColor = Color.Gainsboro;
             BtnLista.Image = (Image)resources.GetObject("BtnLista.Image");
             BtnLista.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnLista.Location = new Point(1, 279);
+            BtnLista.Location = new Point(-3, 207);
             BtnLista.Name = "BtnLista";
             BtnLista.Size = new Size(250, 50);
             BtnLista.TabIndex = 4;
@@ -317,6 +319,24 @@
             PanelContenedor.TabIndex = 2;
             PanelContenedor.Paint += PanelContenedor_Paint;
             // 
+            // btnEventos
+            // 
+            btnEventos.FlatAppearance.BorderSize = 0;
+            btnEventos.FlatAppearance.MouseDownBackColor = Color.FromArgb(44, 53, 139);
+            btnEventos.FlatAppearance.MouseOverBackColor = Color.FromArgb(44, 53, 139);
+            btnEventos.FlatStyle = FlatStyle.Flat;
+            btnEventos.Font = new Font("Trebuchet MS", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnEventos.ForeColor = Color.Gainsboro;
+            btnEventos.Image = (Image)resources.GetObject("btnEventos.Image");
+            btnEventos.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEventos.Location = new Point(3, 353);
+            btnEventos.Name = "btnEventos";
+            btnEventos.Size = new Size(250, 50);
+            btnEventos.TabIndex = 9;
+            btnEventos.Text = "Eventos";
+            btnEventos.UseVisualStyleBackColor = true;
+            btnEventos.Click += btnEventos_Click;
+            // 
             // FrmPrincipal
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -359,5 +379,6 @@
         private Button BtnMarcar;
         private Button btnCrearUsuario;
         private Button btnAyuda;
+        private Button btnEventos;
     }
 }

@@ -143,5 +143,10 @@ namespace pyRegistroAsistencia
         {
             AbrirFormularioHijo(new SubFrmAyuda());
         }
+
+        private void btnEventos_Click(object sender, EventArgs e)
+        {
+            AbrirFormularioHijo(new SubFrmEventos());
+        }
     }
 }
