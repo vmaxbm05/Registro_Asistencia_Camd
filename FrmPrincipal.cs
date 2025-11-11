@@ -29,12 +29,21 @@ namespace pyRegistroAsistencia
             {
                 btnCrearUsuario.Visible = false;
                 BtnReportes.Visible = false;
+                BtnLista.Visible = false;
             }
             else if (rolUsuario == "Administrador")
             {
                 //btnCrearUsuario.Visible = false;
                 //BtnReportes.Visible = false;
                 //btnAjustes.Visible = false;
+                BtnLista.Visible = false;
+
+            }
+            else if (rolUsuario == "Consultor")
+            {
+                btnCrearUsuario.Visible = false;
+                BtnReportes.Visible = false;
+                BtnPersonas.Visible = false;
             }
         }
 
@@ -147,6 +156,13 @@ namespace pyRegistroAsistencia
         private void btnEventos_Click(object sender, EventArgs e)
         {
             AbrirFormularioHijo(new SubFrmEventos());
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            FrmLogin login = new FrmLogin();
+            this.Hide();
+            login.Show();
         }
     }
 }

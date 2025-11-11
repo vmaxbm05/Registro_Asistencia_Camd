@@ -134,6 +134,15 @@ namespace pyRegistroAsistencia
                 return;
             }
 
+            if (usuario == "consultor" && clave == "con123")
+            {
+                MessageBox.Show("Bienvenido, Consultor", "Acceso permitido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                FrmPrincipal principal = new FrmPrincipal("Consultor");
+                principal.Show();
+                return;
+            }
+
             using (MySqlConnection conexion = new MySqlConnection(connectionString))
             {
                 try
